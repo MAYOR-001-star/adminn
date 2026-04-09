@@ -4,8 +4,8 @@ import {revalidatePath} from "next/cache";
 import {Product, User} from "./models";
 import {connectToDB} from "./utils";
 import {redirect} from "next/navigation";
-// import {signIn} from "../auth";
 import bcrypt from "bcryptjs";
+import {signIn} from "../auth";
 
 export const addUser = async (formData) => {
     const {username, email, password, phone, address, isAdmin, isActive} =
